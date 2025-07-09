@@ -1,6 +1,7 @@
 import {reset, seed} from 'drizzle-seed'
 import { db, sql } from './connection.ts'
 import { schema } from './schema/index.ts'
+import { questions } from './schema/questions.ts';
 
 (async () => {
   await reset(db, schema);
@@ -13,6 +14,9 @@ import { schema } from './schema/index.ts'
           name: f.companyName(),
           description: f.loremIpsum(),
         },
+      },
+      questions: {
+        count: 15,
       },
     }
   });
