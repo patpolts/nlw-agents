@@ -16,7 +16,7 @@ import { questions } from './schema/questions.ts';
         },
       },
       questions: {
-        count: 15,
+        count: 10,
       },
     }
   });

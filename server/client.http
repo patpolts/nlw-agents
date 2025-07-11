@@ -34,13 +34,13 @@ GET {{baseUrl}}/rooms/{{roomId}}/questions
 
 ###
 
-#Create questions
-# @name createQuestion
-POST {{baseUrl}}/rooms/{{roomId}}/questions
+#Create questions 
+# @name createQuestion 
+POST {{baseUrl}}/rooms/5052c5ad-f22a-4a5d-9906-929b5879f744/questions
 Content-Type: application/json
 
 {
-    "question":"Esta é uma pergunta teste?"
+    "question":"O que é React?"
 }
 
 ###
