@@ -4,12 +4,13 @@ import { useRooms } from "@/http/use-rooms";
 import { dayjs } from "@/lib/dayjs";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Spinner } from "./spinner";
 
 export function RoomList() {
     const {data, isLoading} = useRooms()
     return(
         <Card>
-            {isLoading && <p className="text-muted-foreground tex-sm">Carregando salas...</p>}
+            {isLoading &&  <Spinner />}
             <CardHeader>
                 <CardTitle>Salas Recentes</CardTitle>
                 <CardDescription>
@@ -27,7 +28,7 @@ export function RoomList() {
                                 <Badge variant={"secondary"} className="text-xs">
                                     {dayjs(room.createdAt).toNow()}
                                 </Badge>
-                                <Badge variant={"secondary"} className="text-xs">
+                                <Badge variant={"default"} className="text-xs">
                                     {room.totalQuestions} pergunta(s)
                                 </Badge>
                             </div>

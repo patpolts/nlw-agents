@@ -1,3 +1,4 @@
+import { BackButton } from "@/components/back-button";
 import { Button } from "@/components/ui/button";
 import { useRef, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
@@ -107,6 +108,7 @@ export function RecordRoomAudio() {
     
     return(
         <div className="h-screen flex flex-col gap-3 items-center justify-center">
+            
             {isRecording ? (
                 <Button onClick={stopRecording}>Pausar gravação</Button>
             ): (

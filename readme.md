@@ -1,10 +1,10 @@
 # NLW Agents
 
-Projeto desenvolvido durante o evento **NLW Agents** da **Rocketseat**. Trata-se de uma aplicação fullstack com backend em Node.js/Fastify e frontend em React.
+Projeto desenvolvido durante o evento **NLW Agents** da **Rocketseat**. Trata-se de uma aplicação fullstack com backend em Node.js/Fastify e frontend em React com shadcnui.
 
 ## Tecnologias Utilizadas
 
-### Backend (`server/`)
+### Backend API (`server/`)
 - **Node.js** + **TypeScript**
 - **Fastify**: Framework web para APIs rápidas
 - **Zod**: Validação de variáveis de ambiente
@@ -15,7 +15,7 @@ Projeto desenvolvido durante o evento **NLW Agents** da **Rocketseat**. Trata-se
 - **dotenv**: Variáveis de ambiente
 - **Biome** (lint e formatação)
 
-### Frontend (`web/`)
+### Frontend APP (`web/`)
 - **React 19** + **TypeScript**
 - **Vite** (build e dev server)
 - **React Router DOM** (rotas SPA)

@@ -26,7 +26,7 @@ export function QuestionItem({ question }: QuestionItemProps) {
                 <MessageSquare className="size-4 text-primary" />
               </div>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 text-left">
               <p className="mb-1 font-medium text-foreground">Pergunta</p>
               <p className="whitespace-pre-line text-muted-foreground text-sm leading-relaxed">
                 {question.question}
