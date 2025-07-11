@@ -1,5 +1,6 @@
 import { BackButton } from "@/components/back-button";
 import { Button } from "@/components/ui/button";
+import { CirclePause, Mic } from "lucide-react";
 import { useRef, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 
@@ -107,14 +108,21 @@ export function RecordRoomAudio() {
     }
     
     return(
-        <div className="h-screen flex flex-col gap-3 items-center justify-center">
-            
-            {isRecording ? (
-                <Button onClick={stopRecording}>Pausar gravação</Button>
-            ): (
-                <Button onClick={startRecording}>Gravar audio</Button>
-            )}
-            {isRecording ? <p>Gravando...</p> : <p>Pausado</p>}
+        <div className="w-full h-full px-4 py-8 ">
+            <BackButton />
+            <div className="flex flex-col h-screen gap-8 items-center justify-center bg-primary/10 px-4 py-8 mx-auto my-8">
+                
+                {isRecording ? (
+                    <Button onClick={stopRecording}>
+                        <CirclePause absoluteStrokeWidth /> Pausar audio
+                    </Button>
+                ): (
+                    <Button onClick={startRecording}>
+                        <Mic absoluteStrokeWidth /> Gravar audio
+                    </Button>
+                )}
+                {isRecording ? <p>Gravando...</p> : <p>Pausado</p>}
+            </div>
         </div>
     )
 }

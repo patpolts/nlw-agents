@@ -22,9 +22,8 @@ Projeto desenvolvido durante o evento **NLW Agents** da **Rocketseat**. Trata-se
 - **@tanstack/react-query** (gerenciamento de dados assíncronos)
 - **TailwindCSS** (estilização utilitária)
 - **class-variance-authority**, **clsx**, **tailwind-merge** (utilitários de classes CSS)
-- **Radix UI** (componentes acessíveis)
+- **Shadcn UI** (componentes acessíveis)
 - **Lucide React** (ícones)
-- **tw-animate-css** (animações)
 - **Biome** (lint e formatação)
 
 ---
