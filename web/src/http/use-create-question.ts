@@ -43,7 +43,6 @@ export function useCreateQuestion(roomId: string) {
             return {newQuestion, questions}
         },
         onSuccess(data, _variables, context){
-            // queryClient.invalidateQueries({queryKey: ['get-questions',roomId]})
             queryClient.setQueryData<GetRooomQuestionsResponse>(
                 ['get-questions', roomId],
                 questions => {
@@ -53,7 +52,12 @@ export function useCreateQuestion(roomId: string) {
 
                     return questions.map((question) => {
                         if(question.id === context.newQuestion.id){
-                            return {...context.newQuestion, id: data.questionId, answer: data.answer}
+                            return {
+                                ...context.newQuestion, 
+                                id: data.questionId, 
+                                answer: data.answer,
+                                isGeneratingAnswer: false
+                            }
                         }
 
                         return question
